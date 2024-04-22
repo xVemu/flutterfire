@@ -30,7 +30,9 @@
   return self.providers[app.name];
 }
 
-- (void)configure:(FIRApp *)app providerName:(NSString *)providerName {
+- (void)configure:(FIRApp *)app
+     providerName:(NSString *)providerName
+       debugToken:(NSString *)debugToken {
   if (self.providers == nil) {
     self.providers = [NSMutableDictionary new];
   }
@@ -40,7 +42,7 @@
   }
 
   FLTAppCheckProvider *provider = self.providers[app.name];
-  [provider configure:app providerName:providerName];
+  [provider configure:app providerName:providerName debugToken:debugToken];
 }
 
 @end

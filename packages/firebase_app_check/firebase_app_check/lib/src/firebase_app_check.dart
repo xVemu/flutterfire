@@ -60,11 +60,15 @@ class FirebaseAppCheck extends FirebasePluginPlatform {
     WebProvider? webProvider,
     AndroidProvider androidProvider = AndroidProvider.playIntegrity,
     AppleProvider appleProvider = AppleProvider.deviceCheck,
+    String? androidDebugToken,
+    String? iosDebugToken,
   }) {
     return _delegate.activate(
       webProvider: webProvider,
       androidProvider: androidProvider,
       appleProvider: appleProvider,
+      androidDebugToken: androidDebugToken,
+      iosDebugToken: iosDebugToken,
     );
   }
 
